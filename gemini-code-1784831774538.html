@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto com Modal de Aviso</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Conteúdo da sua página -->
+    <h1>Bem-vindo ao Sistema</h1>
+    <button id="btnAbrirModal">Abrir Aviso</button>
+
+    <!-- ESTRUTURA DO MODAL -->
+    <div id="modalAviso" class="modal-overlay hidden">
+        <div class="modal-container">
+            <div class="modal-header">
+                <span class="modal-icone">⚠️</span>
+                <h2>Atenção!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Este é um modal de aviso importante. Certifique-se de ter lido todas as regras antes de prosseguir.</p>
+            </div>
+            <div class="modal-footer">
+                <button id="btnCancelar" class="btn btn-secundario">Cancelar</button>
+                <button id="btnConfirmar" class="btn btn-primario">Entendi e Aceito</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link para o JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

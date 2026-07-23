@@ -1,0 +1,115 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    padding: 40px;
+    background-color: #f4f4f9;
+}
+
+/* Fundo escuro atrás do Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease;
+}
+
+/* Ocaultar Modal */
+.modal-overlay.hidden {
+    display: none;
+}
+
+/* Caixa principal do Modal */
+.modal-container {
+    background-color: #fff;
+    width: 90%;
+    max-width: 450px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: surgimento 0.3s ease-out;
+}
+
+@keyframes surgimento {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Cabeçalho */
+.modal-header {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #ffeeba;
+}
+
+.modal-icone {
+    font-size: 1.5rem;
+}
+
+/* Corpo do texto */
+.modal-body {
+    padding: 20px;
+    color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Rodapé / Botões */
+.modal-footer {
+    padding: 12px 20px;
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Estilo dos Botões */
+.btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-primario {
+    background-color: #d39e00;
+    color: #fff;
+}
+
+.btn-primario:hover {
+    background-color: #b38200;
+}
+
+.btn-secundario {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+.btn-secundario:hover {
+    background-color: #5a6268;
+}
